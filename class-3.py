@@ -1,13 +1,134 @@
+class User:
+    name = ''
+    email = ''
+    password = ''
+    login = False
+
+    def __init__(self, name, email, password):
+        self.name = name
+        self.email = email
+        self.password = password
+
+    def login(self):
+        email = input("Enter your email: ")
+        password = input("Enter password: ")
+        if email == self.email and password == self.password:
+            login = True
+            print("Login Successfully")
+        else:
+            print("login Failed !")
+    def logout(self):
+        login = False
+        print("Logged out!")
+    def isLoggedin(self):
+        if self.login:
+            return True
+        else:
+            return False
+    def profile(self):
+        if self.isLoggedin():
+            print(self.name, self.email)
+        else:
+            print("User is not Logged in!")
+
+user1 = User("M-R Maheen", "m@gmail.com", "1")
+
+user1.login()
+user1.profile()
+
+hello = input()
 
 
 
 
-'''class 8 (function paramer pass)
-def sum(num1, num2, num3):
-    sum = num1 + num2 + num3
-    print(sum)
 
-sum(20, 60, 40)'''
+
+
+''' constructor,,,,,,,,
+class testClass:
+    def __init__(self):
+        print("I am a constructor")
+    def fun_one(self):
+        print("I am function one")
+    def fun_two(self):
+         print("I am another function Two")
+ob = testClass()
+ob.fun_one()'''
+
+'''class User:
+    name = ''
+    email = ''
+    password = ''
+    login = False
+
+    def login(self):
+        email = input("Enter your email: ")
+        password = input("Enter password: ")
+        if email == self.email and password == self.password:
+            login = True
+            print("Login Successfully")
+        else:
+            print("login Failed !")
+    def logout(self):
+        login = False
+        print("Logged out!")
+    def isLoggedin(self):
+        if self.login:
+            return True
+        else:
+            return False
+    def profile(self):
+        if self.isLoggedin():
+            print(self.name, self.email)
+        else:
+            print("User is not Logged in!")
+
+user1 = User()
+user1.name = "M-R Maheen"
+user1.email = "m@gmail.com"
+user1.password = "1"
+
+user1.login()
+user1.profile()
+
+hello = input()'''
+
+
+
+
+''' class 10 dauflt func: global & local variables,,,,,
+var = 10
+
+def simpleFunction():
+    loc = var
+    loc = loc + 1
+    print(var)
+
+
+
+simpleFunction()'''
+
+
+'''dauflt parameters ,,,
+    def wishCard(name, wish="Happy Birthday to "):
+    print(wish, name)
+
+
+wishCard("GM Sanzid Ahmed Srabon", "Happy Friendship day")
+'''
+
+
+'''def simpleFunction(num1, num2=10):
+    print(num1, "-", num2)
+
+simpleFunction(2)'''
+# class 9 environment setting,,,,,,,,,,,,,,,,,,
+'''#class 8 (function paramer pass),,,,,,,,,,,,
+def Sum(num1, num2, num3):
+    _sum = num1 + num2 + num3
+    print(_sum)
+Sum(20, 60, 2)'''
+
 
 '''class 7 (simple function).....................
 def simpleFunction():
@@ -53,9 +174,9 @@ while i<=10:
     print("I love myself", i)
     i = i + 1
     i+=1 concating loop'''
-#while condition:
-    #code
-    #condition
+# while condition:
+# code
+# condition
 
 ''' class 4  use if + else + elif/ else if
 age = 20
